@@ -6,10 +6,20 @@
     <a-scene>
 <!-- Challenge
     Add an asset manager that preloads images for the ids below which are being referenced throughout the VR world. 
-IDs: spiderskin, rock, spidereye, cave, and bk          
--->
-
-
+IDs: spiderskin, rock, spidereye, cave, and bk 
+--> 
+      <a-asset>
+        <img id="rock" src="cave1.jpg">
+        <img id="cave2" src="cave2.jpg">
+        <img id="cave3" src="cave3.jpg">
+        <img id="cave4" src="cave4.jpg">
+        <img id="spidereye" src="spidereye2.jpg">
+        <img id="spiderskin" src="spiderskin.jpg">
+        <img id="spiderskin2" src="spiderskin2.jpg">
+        <img id="spiderskin3" src="spiderskin3.jpg">
+        <img id="web" src="web.png">
+      </a-asset>
+      <a-camera position="0 1.4 5" wasd-controls="acceleration: 50; fly: true" look-controls> </a-camera>>
       <a-sky src="#bk" repeat="6 6"></a-sky>
       <a-plane src="#cave" repeat="6 6" position="0 0 -2" width="150" height="150" rotation="-90 0 0"></a-plane>
       <!-- Spider -->
