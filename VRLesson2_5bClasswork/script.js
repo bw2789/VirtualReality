@@ -19,7 +19,7 @@ window.addEventListener("DOMContentLoaded",function() {
   }
 
   //Challenge 1: Create an array to store 20 clouds in random positions
-
+  
   for(let  i=0; i<20; i++){
     let x = rnd(-20,20);
     let z = rnd(-20,20);
