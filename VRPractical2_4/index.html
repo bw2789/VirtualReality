@@ -2,15 +2,18 @@
   <head>
     <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
     <script src="script.js"></script>
+    <script src="rocket.js"></script>
   </head>
   <body>
       <a-scene>
         <!-- Challenge 1: Add a propriate plane and sky for the missile launch site -->
-    
+        <a-plane position="0 0 0" rotation="-90 0 0" width="100" height="100" repeat="50 50" color="green"></a-plane>
+        <a-sky color="blue" repeat="100 100"></a-sky>
+        <a-camera position="0 1.4 5" wasd-controls="acceleration: 50; fly: true" look-controls> </a-camera>
         
       
       <!-- Camera is added so that you do not "spawn" at the origin -->
-      <a-camera position="0 1.3 4"></a-camera>
+      <!-- <a-camera position="0 1.3 4"></a-camera> -->
     </a-scene>
   </body>
 </html>
