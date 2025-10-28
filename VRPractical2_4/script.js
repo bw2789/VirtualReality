@@ -4,8 +4,12 @@ let scene, rocket = [ ] ;
 window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene");
   
-  rocket = new rocket( 0,0,0);
-  rocket.push(rocket);
+  for(let i = 0; i < 10; i++){
+    let rocket = new Rocket( 0,0,0);
+    rocket.push(rocket);
+  }
+  
+  
 
   
 
@@ -14,7 +18,10 @@ window.addEventListener("DOMContentLoaded",function() {
 })
 
 function loop(){
-  rocket.fly();
+  for(let rocket of rocket){
+    rocket.fly();
+  }
+ 
   
   window.requestAnimationFrame( loop );
 }
