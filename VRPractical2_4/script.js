@@ -9,9 +9,6 @@ window.addEventListener("DOMContentLoaded",function() {
     rocket.push(rocket);
   }
   
-  
-
-  
 
 
   loop();
