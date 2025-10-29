@@ -1,14 +1,15 @@
 class Rocket{
   constructor(x,y,z){
+    this.a = 0;
+    this.da = 0.01;
     this.obj = document.createElement("a-entity");
   
-    let top = document.createElement("a-cone");
-    top.setAttribute("radius-top","0");
-    top.setAttribute("radius-bottom","0.5");
-    top.setAttribute("height","1");
-    top.setAttribute("color","red");
-    roof.setAttribute("position","0 0 -2");
-    this.obj.append(top);
+    let toppart = document.createElement("a-cone");
+    toppart.setAttribute("radius-bottom","0.5");
+    toppart.setAttribute("height","1");
+    toppart.setAttribute("color","red");
+    toppart.setAttribute("position","0 0 -2");
+    this.obj.append(toppart);
   
     let body = document.createElement("a-cylinder");
     body.setAttribute("color","gray");
@@ -28,6 +29,11 @@ class Rocket{
   
     this.obj.setAttribute("position",{x:x, y:y, z:z});
     scene.append(this.obj)
+  }
+
+  fly(){
+    this.a += this.da;
+    this.obj.setAttribute("position",{x:0, y:this.a, z:0});
   }
 
     

@@ -4,18 +4,20 @@ let scene, rocket = [ ] ;
 window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene");
 
-  rocket = new Rocket(0, 2, 0)
-
+ 
+  rocket = new Rocket(0,0)
+  
+  
   
   
 
-  //loop();
+  loop();
 })
 
-// function loop(){
- 
+function loop(){
+  rocket.fly()
   
 
   
-//   window.requestAnimationFrame( loop );
-// }
+  window.requestAnimationFrame( loop );
+}
