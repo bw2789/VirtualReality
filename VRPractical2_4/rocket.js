@@ -1,7 +1,8 @@
 class Rocket{
   constructor(x,y,z){
+    //let rnd = (l,u) => Math.floor(Math.random()*(u-l) + l);
     this.a = 0;
-    this.da = 0.01;
+    this.da = 0.1
     this.obj = document.createElement("a-entity");
   
     let toppart = document.createElement("a-cone");

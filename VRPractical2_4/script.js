@@ -5,7 +5,14 @@ window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene");
 
  
-  rocket = new Rocket(0,0)
+
+  for(let i=0; i <=100; i++){
+    let x = rnd(-20,20);
+    let z = rnd(-20,20);
+    let rocket = new Rocket(x, 0 , z);
+  }
+
+  
   
   
   
@@ -15,7 +22,10 @@ window.addEventListener("DOMContentLoaded",function() {
 })
 
 function loop(){
-  rocket.fly()
+  for(let rocket of rocket){
+    rocket.fly();
+  }
+  
   
 
   
