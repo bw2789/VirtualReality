@@ -1,6 +1,8 @@
 class Rocket {
   constructor(x, y, z) {
-    this.y = 0;
+    this.x = x; 
+    this.y = y;
+    this.z = z;
     this.dy = Math.random() * 0.05 + 0.02; 
 
     
@@ -26,6 +28,6 @@ class Rocket {
 
   launch() {
     this.y += this.dy;
-    this.obj.setAttribute("position", {x:0, y:this.y, z:0});
+    this.obj.setAttribute("position", {x:this.x, y:this.y, z:this.z});
   }
 }

@@ -1,16 +1,21 @@
 let rnd = (l,u) => Math.floor(Math.random()*(u-l) + l);
 let scene;
 let rockets = [];
+let ufos = [];
+let gridSize = 50
+let spacing = 4;
 
 window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene");
 
-  for (let i = 0; i <= 100; i++) {
-    let x = rnd(-100, 100);
-    let z = rnd(-100, 100);
-
-    let r = new Rocket(x, 0, z);
-    rockets.push(r);
+  for (let i = 0; i < gridSize; i++) {
+    for (let j = 0; j < gridSize; j++) {
+      let x = (i - gridSize / 2) * spacing;  
+      let z = (j - gridSize / 2) * spacing;  
+      let y = Math.random() * -3 - 1;        
+      let r = new Rocket(x, y, z);
+      rockets.push(r);
+    }
   }
   
   for (let i = 0; i < 20; i++) {
