@@ -2,7 +2,7 @@ let target;
 
 window.addEventListener("DOMContentLoaded",function() {
   target = document.querySelector("#target");
-  target.a = 0;
+  target.a = 0.25;
   target.da = -1;
 
   loop();
