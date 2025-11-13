@@ -40,6 +40,7 @@ let maze = [
 */
 
 let scene;
+mech = document.getElementById("mech-1");
 
 window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene");
@@ -58,5 +59,19 @@ window.addEventListener("DOMContentLoaded",function() {
     }
 
   }
+
+  clone = mech.cloneNode(true);
+  clone.setAttribute("id","mech-"+(i+2));
+  clone.setAttribute("position",{x:1,y:13,z:1});
+  scene.appendChild(clone);
+  
+  loop();
+
+  function loop() {
+    window.requestAnimationFrame(loop);
+  } 
+
+
+
 
 })
