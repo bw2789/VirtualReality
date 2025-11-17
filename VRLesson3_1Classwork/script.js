@@ -12,9 +12,12 @@ window.addEventListener("DOMContentLoaded",function() {
   myBox.addEventListener("mouseleave",function(){
     this.setAttribute("height",1);
   })
-  myCylinder.addEventListener("onclick",function(){
-    this.setAttribute("opacity",0);
-  }
+
   //Task 5: Make  the the cylinder disappear when you click on it.  Set opacity to zero
 
+  myCylinder.addEventListener("click",function(){
+    this.setAttribute("opacity",0);
+  })
+  
+  
 })
