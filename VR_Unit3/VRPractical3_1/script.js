@@ -57,7 +57,7 @@ function loop(){
   //Challenge 5: Add a decision that checks for the flag on balloon2.  If the flag is true, make balloon2 fly up. Hint: Look at the HTML to find out the original x and z coordinates.
   if(balloon2.fly){
     balloon2.y += balloon2.dy;
-    balloon2.setAttribute("position",{x:-2, y: balloon2.y, z:-3});
+    balloon2.setAttribute("position",{x:0, y: balloon2.y, z:0});
   }
   
   
