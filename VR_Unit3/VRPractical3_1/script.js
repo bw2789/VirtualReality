@@ -51,13 +51,13 @@ function loop(){
   if(balloon1.fall){
     //Challenge 3: Add the animation to make the balloon fall.  Hint: Look at the HTML to find out the original x and z coordinates.
     balloon1.y += balloon1.dy;
-    balloon1.setAttribute("position",{x:2, y: balloon1.y, z:-3});
+    balloon1.setAttribute("position",{x:4, y: balloon1.y, z:1});
     
   }
   //Challenge 5: Add a decision that checks for the flag on balloon2.  If the flag is true, make balloon2 fly up. Hint: Look at the HTML to find out the original x and z coordinates.
   if(balloon2.fly){
     balloon2.y += balloon2.dy;
-    balloon2.setAttribute("position",{x:0, y: balloon2.y, z:0});
+    balloon2.setAttribute("position",{x:-4, y: balloon2.y, z:-3});
   }
   
   
