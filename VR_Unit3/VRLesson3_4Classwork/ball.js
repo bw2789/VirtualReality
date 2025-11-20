@@ -32,10 +32,10 @@ class Ball{
     if(this.x < -10 || this.x > 10){
       this.dx = -this.dx;
     }
-    if(this.y < 0 || this.x > 10){
+    if(this.y < 0 || this.y > 10){
       this.dy = -this.dy;
     }
-    if(this.z < -10 || this.z > 10){
+    if(this.z < -10 || this.z > 2){
       this.dz = -this.dz;
     }
     this.obj.setAttribute("position",{x:this.x, y:this.y, z:this.z});
