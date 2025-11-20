@@ -10,6 +10,16 @@ class Ball{
     this.obj = document.createElement("a-sphere");
     this.obj.setAttribute("clickable","");
     // Challenge 6: Add the event listener to make the ball disappear and increase the score
+    this.obj.addEventListener("click", () => {
+      this.obj.setAttribute("visible", "true");
+      score += 1;
+      this.x = rnd(-10,10);
+      this.y = rnd(2,10);
+      this.z = rnd(-10,-2);
+      this.obj.setAttribute("position",{x:this.x, y:this.y, z:this.z});
+    });
+    this.obj.setAttribute("radius",0.5);
+    this.obj.setAttribute("color","red");
   
 
     this.obj.setAttribute("position",{x:this.x, y:this.y, z:this.z});
