@@ -19,7 +19,7 @@ class Ball{
       this.obj.setAttribute("position",{x:this.x, y:this.y, z:this.z});
     });
     this.obj.setAttribute("radius",0.5);
-    this.obj.setAttribute("color","red");
+    this.obj.setAttribute("color","#34e5eb");
   
 
     this.obj.setAttribute("position",{x:this.x, y:this.y, z:this.z});
