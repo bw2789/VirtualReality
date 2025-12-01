@@ -44,6 +44,7 @@ function distance(obj1,obj2){
   let y2 = obj2.object3D.position.y;
   let z2 = obj2.object3D.position.z;
 
+  //distance formula
   let d = Math.sqrt(Math.pow(x1-x2,2) + Math.pow(y1-y2,2) + Math.pow(z1-z2,2));
   return d;
 }
