@@ -14,6 +14,7 @@ window.addEventListener("DOMContentLoaded",function() {
     potholes.push(p);
   }
   
+  
   setTimeout(loop,100);
 })
 function loop(){
@@ -22,13 +23,17 @@ function loop(){
      pothole is less than 1.7, set the camera's drop variable to true. 
   */
   for(let i=0;i<potholes.length;i++){
-    let d = distance(camera,potholes[i]);
+    let d = distance(camera, potholes[i].obj);
     if(d < 1.7){
       camera.drop = true;
     }
+  }
 
-  if(camera.drop){
-    camera.object3D.position.y -= 0.025;
+  if(camera.drop == true){
+    camera.object3D.position.y -= 0.2;
+  } 
+  if(camera.object3D.position.y <= -10){
+      camera.object3D.position.y += 0.2;
   }
  
   window.requestAnimationFrame(loop);
