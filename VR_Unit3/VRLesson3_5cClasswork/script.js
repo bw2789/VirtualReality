@@ -19,10 +19,21 @@ window.addEventListener("DOMContentLoaded",function() {
 function loop(){
   /* Challenge
      Traverse the blocks and call the shrink function.  
-     If dart hits a block, set the blocks shot variable to true.
+     If dart hits a block, set the blocks shot variable to true. and make the dart disappear after flying too far. 
      Note: Explore the Block class for an understanding of the 
      above two tasks.
   */
+   for(let block of blocks){
+    block.shrink();
+    if(dart){
+      let d = distance(dart.obj,block.obj);
+      if(d <= 0.5){
+        block.shot = true;
+      }
+      
+    }
+  }
+
 
   if(dart){
     dart.fly();
