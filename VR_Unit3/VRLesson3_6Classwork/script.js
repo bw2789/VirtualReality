@@ -19,7 +19,30 @@ window.addEventListener("DOMContentLoaded",function() {
     Note: Copy and paste!
   */
 
+  window.addEventListener("keydown", function() {
+    if(event.key == "1"){
+      gem.object3D.rotation.z += 1;
+    } else if(event.key == "2"){
+      gem.object3D.rotation.z -= 1;
+    } else if(event.key == "3"){
+      gem.object3D.rotation.x += 1;
+    } else if(event.key == "4"){
+      gem.object3D.rotation.x -= 1;
+    } else if(event.key == "5"){
+      gem.object3D.rotation.y += 1;
+    } else if(event.key == "6"){
+      gem.object3D.rotation.y -= 1;
+    }
+  }
+  );
+
+
+
   /*  Challenge 2
      When the user clicks in the window, resets the gem rotation to (0,0,0)
   */ 
+  window.addEventListener("click", function() {
+    gem.setAttribute("rotation",{x:0,y:0,z:0});
+  }); 
+
 })
