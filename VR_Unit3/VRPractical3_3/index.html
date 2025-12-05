@@ -9,6 +9,29 @@
       <a-plane position="0 0 -4" rotation="-90 0 0" width="40" height="40" color="#7BC8A4"></a-plane>
       <a-sky color="#ECECEC"></a-sky>
       <a-camera position="0 1.6 0"></a-camera>
+
+      a-asset>
+        <img id="spidereye" src="spidereye2.jpg">
+        <img id="spiderskin" src="spiderskin.jpg">
+        <img id="web" src="web.png">
+      </a-asset>
+
+      <!-- Spider -->
+      <a-entity rotation="0 0 0" position="0 0.5 -2" scale="0.4 0.4 0.4">
+        <a-sphere src="#spidereye" position="0.5 0.25 0.85" radius="0.175"></a-sphere>
+        <a-sphere src="#spidereye" position="0.2 0.25 0.85" radius="0.25"></a-sphere>
+        <a-sphere src="#spidereye" position="-0.2 0.25 0.85" radius="0.25"></a-sphere>
+        <a-sphere src="#spidereye" position="-0.5 0.25 0.85" radius="0.175"></a-sphere>
+        <a-entity position="0 0 0">
+          <a-sphere src="#spiderskin" position="0 0 0"></a-sphere>
+          <a-cylinder src="#spiderskin" position="-1 0.5 0.25" radius="0.25" height="2" rotation="0 0 45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="-2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 -45"></a-cylinder>
+
+          <a-cylinder src="#spiderskin" position="1 0.5 0.25" radius="0.25" height="2" rotation="0 0 -45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 45"></a-cylinder>
+        </a-entity>
+      </a-entity>
+
     </a-scene>
   </body>
 </html>
