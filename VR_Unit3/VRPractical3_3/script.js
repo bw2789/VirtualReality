@@ -1,9 +1,17 @@
 let rnd = (l,u) => Math.random() * (u-l) + l
-let scene, camera, bullet, enemies = [], ammo_boxes = [], ammo_count = 3, enemy_killed = 0;
+let scene, camera, bullet, enemies = [], ammo_boxes = [], ammo_count = 3, enemy_hits = 0;
 
 window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene");
   camera = document.querySelector("a-camera");
+
+  
+
+  for(let i=0;i<5;i++){
+    let x = rnd(-20,20);
+    let z = - (rnd(20,20));
+    enemies.push(new Block(x,z));
+  }
 
   window.addEventListener("keydown",function(e){
     //User can only fire with they press the spacebar and have sufficient ammo
@@ -21,6 +29,18 @@ function loop(){
   if(bullet){
     bullet.fire();
   }
+
+  for(let enemy of enemies){
+    if(bullet && distance(bullet.obj,enemy.obj) < 1){
+      enemy.shot = true;
+      enemy_hits++;
+      console.log("Enemy hit: " + enemy_hits);
+      scene.removeChild(bullet.obj);
+      bullet = null;
+    }
+    enemy.shrink();
+  }
+
  
   window.requestAnimationFrame(loop);
 }
