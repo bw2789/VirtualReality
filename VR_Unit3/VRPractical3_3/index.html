@@ -9,7 +9,11 @@
     <a-scene>
       <a-plane position="0 0 -4" rotation="-90 0 0" width="40" height="40" color="#7BC8A4"></a-plane>
       <a-sky color="#ECECEC"></a-sky>
-      <a-camera position="0 1.6 0"></a-camera>
+      <a-camera position="0 1.6 5">
+          <a-cursor raycaster="objects: [interact]">
+            <a-text id="output" position="-1 2 -2"></a-text>
+          </a-cursor>
+        </a-camera>
 
       <a-assets>
         <img id="spidereye" src="spidereye2.jpg">
