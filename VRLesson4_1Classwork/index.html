@@ -11,11 +11,11 @@
     <a-scene>
       <a-assets>
         <a-asset-item id="ufoModel" src="ufo.glb"></a-asset-item>
-        <a-asset-item id="robotModel" src="robot.glb"></a-asset-item>
+        <a-asset-item id="robotModel" src="floating_robot.glb"></a-asset-item>
       </a-assets>
 
-      <a-gltf-model src="#ufoModel" position="0 5 -10" scale="2 2 2" rotation="0 45 0" ufo-animation></a-gltf-model>
-      <a-gltf-model src="#robotModel" position="5 0 -5" scale="1 1 1" rotation="0 180 0" robot-animation></a-gltf-model>
+      <a-gltf-model src="#ufoModel" position="0 5 -10"  ufo-animation></a-gltf-model>
+      <a-gltf-model src="#robotModel" position="5 0 -5" robot-animation></a-gltf-model>
 
       <a-sky color="cyan"></a-sky>
       <a-plane color="gray" rotation="-90 0 0" width="50" height="50"></a-plane>
