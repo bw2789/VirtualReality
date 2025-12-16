@@ -1,7 +1,8 @@
 class Ball{
   constructor(x,y,z){
-    this.obj = document.createElement("a-sphere");
-    this.obj.setAttribute("radius","0.5");
+    this.obj = document.createElement("a-gltf-model");
+    this.obj.setAttribute("src","#nade");
+    this.obj.setAttribute("scale","0.1 0.1 0.1");
     //Challenge 1: Make the ball a dynamic body
     this.obj.setAttribute("dynamic-body","");
     let r = Math.floor(rnd(0,255));

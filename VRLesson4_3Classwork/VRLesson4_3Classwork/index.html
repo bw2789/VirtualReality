@@ -9,6 +9,11 @@
   </head>
   <body>
 <a-scene physics="debug: false">
+      <a-assets>
+        <a-asset-item id="nade" src="nade.glb"></a-asset-item>
+      </a-assets>
+
+      <a-gltf-model id="nade" src="#nade" position="0 1.6 0" scale="0.1 0.1 0.1"></a-gltf-model>
 
   <!-- Floor -->
   <a-plane static-body color="green" rotation="-90 0 0" side="double" width="50" height="50" opacity="0.5"></a-plane>
@@ -16,7 +21,7 @@
   <!-- Challenge 3: Add some static-body components for you and the balls to bump into -->
 
   <a-entity id="cameraRig" movement-controls="fly: true; speed: 0.7" position="0 1.6 0">
-    <a-camera id="camera" kinema-body="radius: 0.8">
+    <a-camera id="camera" position="0 1.6 0">
       <a-cursor></a-cursor>
     </a-camera>
   </a-entity>
