@@ -16,6 +16,21 @@ class Drone{
     let cursor = document.createElement("a-cursor");
     cursor.setAttribute("color","yellow");
     this.camera.append( cursor );
+
+     window.addEventListener("keydown", function(event) {
+    if(event.key.toLowerCase() === "r") {
+      if(drones.length > 0) {
+        drones[0].camera.setAttribute("active", false);
+        if(mainCamera.getAttribute("active")) {
+          mainCamera.setAttribute("active", false);
+          drones[0].camera.setAttribute("active", true);
+        } else {
+          mainCamera.setAttribute("active", true);
+          drones[0].camera.setAttribute("active", false);
+        }
+      }
+    }
+  });
     
 
 

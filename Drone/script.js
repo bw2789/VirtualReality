@@ -6,17 +6,7 @@ window.addEventListener("DOMContentLoaded",function() {
   
   drones.push( new Drone( 0, 2, 0 ) );
   
-  // Keyboard event listener for switching cameras
-  window.addEventListener("keydown", function(event) {
-    if(event.key.toLowerCase() === "r") {
-      if(drones.length > 0) {
-        // Disable main camera
-        mainCamera.setAttribute("active", false);
-        // Enable drone camera
-        drones[0].camera.setAttribute("active", true);
-      }
-    }
-  });
+
   
   loop();
 });
