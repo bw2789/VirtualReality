@@ -4,14 +4,11 @@ class Drone{
     this.y = y;
     this.dy = 0.005
     this.z = z;
-    
-    this.obj = document.createElement("a-box");
-    this.obj.setAttribute("position",{x:x,y:0.5,z:z});
-    this.obj.setAttribute("width","1");
-    this.obj.setAttribute("height","0.5");
-    this.obj.setAttribute("depth","1");
-    this.obj.setAttribute("color","blue");
 
+    this.obj = document.createElement("a-gltf-model");
+    this.obj.setAttribute("src","#drone1");
+    this.obj.setAttribute("position",{x:x,y:0.5,z:z});
+  
     this.camera = document.createElement("a-camera");
     this.camera.setAttribute("active",false);
     this.camera.setAttribute("wasd-controls-enabled",false);
