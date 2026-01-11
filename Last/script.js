@@ -4,4 +4,6 @@ let scene, camera;
 
 window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene");
+
+  let building1 = new Building1(0, 0, 0);
 })
