@@ -5,5 +5,7 @@ let scene, camera;
 window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene");
 
-  let building1 = new Building1(0.5, -0.5, 0.5);
+  // let Floor1Wall1 = new Floor1Wall(0.5, -0.5, 0.5);
+
+  let building1 = new Building1(0,-0.43,0);
 })

@@ -1,4 +1,4 @@
-class Building1{
+class Floor1Base{
   constructor(x,y,z){
     this.obj = document.createElement("a-entity");
   
@@ -9,6 +9,23 @@ class Building1{
     base.setAttribute("width","15");
     base.setAttribute("depth","15");
     this.obj.append( base );
+    
+    this.obj.setAttribute("position",{x:x, y:y, z:z});
+    scene.append( this.obj )
+  } 
+}
+
+class Floor1Wall{
+  constructor(x,y,z){
+    this.obj = document.createElement("a-entity");
+  
+    // let base = document.createElement("a-box");
+    // base.setAttribute("color","red");
+    // base.setAttribute("position","0 0.5 0");
+    // base.setAttribute("height","0.1");
+    // base.setAttribute("width","15");
+    // base.setAttribute("depth","15");
+    // this.obj.append( base );
 
     let floor1wall1 = document.createElement("a-box");
     floor1wall1.setAttribute("color","#B3B3B3");
@@ -39,7 +56,7 @@ class Building1{
 
     let floor1wall4 = document.createElement("a-box");
     floor1wall4.setAttribute("color","#B3B3B3");
-    floor1wall4.setAttribute("position","4.25 2.1 -7");
+    floor1wall4.setAttribute("position","4.2 2.1 -7");
     floor1wall4.setAttribute("height","3.3");
     floor1wall4.setAttribute("width","0.35");
     floor1wall4.setAttribute("depth","0.25");
@@ -48,7 +65,7 @@ class Building1{
 
     let floor1wall5 = document.createElement("a-box");
     floor1wall5.setAttribute("color","#B3B3B3");
-    floor1wall5.setAttribute("position","1.25 2.1 -7");
+    floor1wall5.setAttribute("position","1.2 2.1 -7");
     floor1wall5.setAttribute("height","3.3");
     floor1wall5.setAttribute("width","0.35");
     floor1wall5.setAttribute("depth","0.25");
@@ -66,22 +83,89 @@ class Building1{
 
     let floor1wall7 = document.createElement("a-box");
     floor1wall7.setAttribute("color","#B3B3B3");
-    floor1wall7.setAttribute("position","-4.75 2.1 -7");
+    floor1wall7.setAttribute("position","-4.67 2.1 -7");
     floor1wall7.setAttribute("height","3.3");
     floor1wall7.setAttribute("width","0.35");
     floor1wall7.setAttribute("depth","0.25");
     floor1wall7.setAttribute("side","double");
     this.obj.append( floor1wall7 );
 
-    let floor1window = document.createElement("a-box");
-    floor1window.setAttribute("color","#D7DFD8");
-    floor1window.setAttribute("opacity","0.3");
-    floor1window.setAttribute("position","0 1.6 -7");
-    floor1window.setAttribute("height","4");
-    floor1window.setAttribute("width","14.5");
-    floor1window.setAttribute("depth","0.15");
-    floor1window.setAttribute("side","double");
-    this.obj.append( floor1window );
+    let floor1window1 = document.createElement("a-box");
+    floor1window1.setAttribute("color","#D7DFD8");
+    floor1window1.setAttribute("opacity","0.3w");
+    floor1window1.setAttribute("position","5.725 1.6 -7");
+    floor1window1.setAttribute("height","4");
+    floor1window1.setAttribute("width","2.7");
+    floor1window1.setAttribute("depth","0.15");
+    floor1window1.setAttribute("side","double");
+    this.obj.append( floor1window1 );
+
+    let floor1window2 = document.createElement("a-box");
+    floor1window2.setAttribute("color","#D7DFD8");
+    floor1window2.setAttribute("opacity","0.3w");
+    floor1window2.setAttribute("position","2.725 1.6 -7");
+    floor1window2.setAttribute("height","4");
+    floor1window2.setAttribute("width","2.7");
+    floor1window2.setAttribute("depth","0.15");
+    floor1window2.setAttribute("side","double");
+    this.obj.append( floor1window2 );
+
+    let floor1window3 = document.createElement("a-box");
+    floor1window3.setAttribute("color","#D7DFD8");
+    floor1window3.setAttribute("opacity","0.3w");
+    floor1window3.setAttribute("position","-0.3 1.6 -7");
+    floor1window3.setAttribute("height","4");
+    floor1window3.setAttribute("width","2.7");
+    floor1window3.setAttribute("depth","0.15");
+    floor1window3.setAttribute("side","double");
+    this.obj.append( floor1window3 );
+
+    let floor1window4 = document.createElement("a-box");
+    floor1window4.setAttribute("color","#D7DFD8");
+    floor1window4.setAttribute("opacity","0.3w");
+    floor1window4.setAttribute("position","-3.25 1.6 -7");
+    floor1window4.setAttribute("height","4");
+    floor1window4.setAttribute("width","2.7");
+    floor1window4.setAttribute("depth","0.15");
+    floor1window4.setAttribute("side","double");
+    this.obj.append( floor1window4 );
+
+    let floor1window5 = document.createElement("a-box");
+    floor1window5.setAttribute("color","#D7DFD8");
+    floor1window5.setAttribute("opacity","0.3w");
+    floor1window5.setAttribute("position","-5.925 1.6 -7");
+    floor1window5.setAttribute("height","4");
+    floor1window5.setAttribute("width","2.3");
+    floor1window5.setAttribute("depth","0.15");
+    floor1window5.setAttribute("side","double");
+    this.obj.append( floor1window5 );
+
+    
+    
+
+    this.obj.setAttribute("position",{x:x, y:y, z:z});
+    scene.append( this.obj )
+  }
+}
+
+
+class Building1{
+  constructor(x,y,z){
+    this.obj = document.createElement("a-entity");
+
+    let base = new Floor1Base(0,0,0);
+    this.obj.append( base.obj );
+
+    let wall1 = new Floor1Wall(0,0,0);
+    this.obj.append( wall1.obj );
+
+    let wall2 = new Floor1Wall(0,0,0);
+    wall2.obj.setAttribute("rotation",{x:0, y:90, z:0});
+    this.obj.append( wall2.obj );
+
+    let wall3 = new Floor1Wall(0,0,0);
+    wall3.obj.setAttribute("rotation",{x:0, y:-90, z:0});
+    this.obj.append( wall3.obj );
 
     this.obj.setAttribute("position",{x:x, y:y, z:z});
     scene.append( this.obj )
