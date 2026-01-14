@@ -7,6 +7,6 @@ window.addEventListener("DOMContentLoaded",function() {
 
   // let Floor1Wall1 = new Floor1Wall(0.5, -0.5, 0.5);
 
-  let building1 = new Building1(0.5,-0.43,0.5);
-  let building2 = new Building1(18.5,-0.43,0.5);
+  // let building1 = new Building1(0.5,-0.43,0.5);
+  // let building2 = new Building1(18.5,-0.43,0.5);
 })

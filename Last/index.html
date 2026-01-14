@@ -3,11 +3,18 @@
     <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
     <script src="script.js"></script>
     <script src="Building1.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.6.1/dist/aframe-extras.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-physics-system@v4.2.2/dist/aframe-physics-system.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.5.x/dist/aframe-environment-component.min.js"></script>
+    <script src="kinema.js"></script>
   </head>
   <body>
     <a-scene>
-      <a-plane src="squarer.jpg" repeat="100 100" position="0 0 -4" rotation="-90 0 0" width="100" height="100" ></a-plane>
+      <a-plane src="squarer.jpg" repeat="100 100" position="0 -1 -4" rotation="-90 0 0" width="100" height="100" ></a-plane>
       <a-sky color="#27D3F5"></a-sky>
+      <!-- <a-entity id="floor" environment="playArea:1; stageSize:1000; groundYScale: 200; seed:2"></a-entity> -->
+      <a-entity environment="preset: osiris; groundColor: #445; grid: cross"></a-entity>
+
       <a-camera position="0 1.4 5" wasd-controls="acceleration: 50; fly: true" look-controls> </a-camera>
           <a-cursor raycaster="objects: [interact]">
             <a-text id="output" position="-1 2 -2"></a-text>
