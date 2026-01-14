@@ -12,8 +12,9 @@
     <a-scene>
       <a-plane src="squarer.jpg" repeat="100 100" position="0 -1 -4" rotation="-90 0 0" width="100" height="100" ></a-plane>
       <a-sky color="#27D3F5"></a-sky>
-      <!-- <a-entity id="floor" environment="playArea:1; stageSize:1000; groundYScale: 200; seed:2"></a-entity> -->
-      <a-entity environment="preset: osiris; groundColor: #445; grid: cross"></a-entity>
+      <a-entity id="floor" static-body environment="playArea:1; stageSize:1000; groundYScale: 200; seed:2"></a-entity>
+      
+    
 
       <a-camera position="0 1.4 5" wasd-controls="acceleration: 50; fly: true" look-controls> </a-camera>
           <a-cursor raycaster="objects: [interact]">
@@ -21,10 +22,6 @@
           </a-cursor>
       </a-camera>
 
-      <!-- <a-box position="0.5 0.5 -3.5" color="#4CC3D9" ></a-box>
-      <a-box position="0.5 1.5 -3.5" color="#EF2D5E" ></a-box> -->
-
-      <!-- <a-box  width="20" height="35.5" depth="20" position="20.5 17 -20.5" color="#7BC8A4" ></a-box> -->
 
 
     </a-scene>
