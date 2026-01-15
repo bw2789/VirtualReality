@@ -5,6 +5,8 @@ class Box{
       Associate the fireball sound with the box and 
       enable it to play forever
    */
+  
+      
 
     this.boom = false;  
 
