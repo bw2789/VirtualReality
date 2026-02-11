@@ -23,9 +23,9 @@ window.addEventListener("DOMContentLoaded",function() {
   })
   
   window.requestAnimationFrame(loop);
-  setTimeout(countdown,1000);
-  updateUI();
-    setTimeout(spawnAmmo, rnd(8,15) * 1000);
+  // setTimeout(countdown,1000);
+  // updateUI();
+  //   setTimeout(spawnAmmo, rnd(8,15) * 1000);
 })
 
   function spawnAmmo(){
@@ -61,34 +61,34 @@ function loop(){
   window.requestAnimationFrame(loop)
 }
 
-function countdown(){
-  if (!game_over) {
-    time_remaining--;
-    updateUI();
+// function countdown(){
+//   if (!game_over) {
+//     time_remaining--;
+//     updateUI();
 
-    if (time_remaining <= 0) {
-      endGame(false);
-    } else {
-      setTimeout(countdown, 1000);
-    }
-  }
-}
+//     if (time_remaining <= 0) {
+//       endGame(false);
+//     } else {
+//       setTimeout(countdown, 1000);
+//     }
+//   }
+// }
 
  
-function updateUI(){
-  let out = document.querySelector('#output');
-  if(out){
-    out.setAttribute('value', `Ammo: ${ammo_count}  Time: ${time_remaining}s  Hits: ${enemy_hits}`);
-  }
-}
+// function updateUI(){
+//   let out = document.querySelector('#output');
+//   if(out){
+//     out.setAttribute('value', `Ammo: ${ammo_count}  Time: ${time_remaining}s  Hits: ${enemy_hits}`);
+//   }
+// }
 
-function endGame(won){
-  game_over = true;
-  let out = document.querySelector('#output');
-  if(out){
-    out.setAttribute('value', won ? 'You win!' : 'Game over');
-  }
-}
+// function endGame(won){
+//   game_over = true;
+//   let out = document.querySelector('#output');
+//   if(out){
+//     out.setAttribute('value', won ? 'You win!' : 'Game over');
+//   }
+// }
 
 function distance(obj1,obj2){
   let x1 = obj1.object3D.position.x;
